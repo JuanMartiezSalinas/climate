@@ -14,6 +14,7 @@ const Info = () => {
       <div className="algo">
         <h4>Climate in {info.name}</h4>
         <img
+          alt="icon describing the climate in the desired city"
           className="climateImage"
           src={`http://openweathermap.org/img/wn/${info.icon}@2x.png`}></img>
       </div>

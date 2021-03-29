@@ -32,7 +32,7 @@ const SearchForm = () => {
           onChange={searchCity}
           required
         />
-        <label for="cityName" className="label">
+        <label htmlFor="cityName" className="label">
           City
         </label>
         <button className="btn" type="submit" onClick={handleClick}>

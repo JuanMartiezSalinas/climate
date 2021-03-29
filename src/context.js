@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useContext, useCallback, useEffect } from "react";
+import React, { useState, useContext, useCallback } from "react";
 
 const AppContext = React.createContext();
 
@@ -26,11 +26,14 @@ const AppProvider = ({ children }) => {
           humidity: data.main.humidity,
           pressure: data.main.pressure,
           wind: data.wind.speed,
+          message: "",
         });
       }
     } catch (error) {
       console.log("there's a fucking error bro");
-      console.log(error);
+      alert(
+        "City not found, please verify if the cityh name is correct or look for another city"
+      );
     }
   }, [entrada]);
 
